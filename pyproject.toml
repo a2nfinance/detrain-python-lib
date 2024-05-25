@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "detrain"
+version = "0.2.6"
+authors = [
+    {name = "Levi", email = "levi@a2n.finance"},
+    {name = "John", email = "john@a2n.finance"},
+]
+readme= "README.rst"
+description = "A package for distributed training & model parallelism using Torch"
+requires-python = ">=3.8"
+keywords = ["torch", "model parallelism", "pipeline", "tensor"]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+    "torch"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*", "examples*"]
+namespaces = false
